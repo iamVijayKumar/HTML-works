@@ -15,8 +15,17 @@
             
             function changeTheme() {
                 var x = document.getElementById("Switch").checked;
+                console.log(x);
                 var element = document.body;
                 element.classList.toggle("dark-mode");
+                var b=document.getElementsByTagName("button");
+                var c=document.getElementsByTagName("nav")[0];
+                var d=document.getElementsByTagName("span")[1];
+                d.classList.toggle("navbar-dark");
+                c.classList.toggle("my-toggler");
+                for(var i=1;i<b.length;i++){
+                    b[i].classList.toggle("text-light");
+                }
                 
             }
             function opendiv(i){
@@ -53,13 +62,21 @@
             figure{
                 align-items: center;
             }
+            nav{
+                background-color: #b8d5e9;
+            }
+            .my-toggler{
+                background-image: linear-gradient(rgba(0, 0, 0, 0.930),rgba(0, 0, 0, 0.930));
+            }
+            
+            
         </style>
     </head>
    <body class="container-fluid">
         <div class="row">
             <div class="col-6 mt-5">
                 <h1 class="text-center">Hi Vijay ...!</h1>
-                <div class="d-flex justify-content-center ">
+                <div class="d-flex justify-content-center">
                     <span class="badge badge-pill badge-light bg-warning">Program Analyst Trainee</span> <br>
                 </div>
               <!--  <p class="text-center">Welcome to Cognizant</p> -->
@@ -73,32 +90,32 @@
         </div>
         <div class="row">
             
-        <nav class="navbar navbar-light navbar-expand-lg"style="background-color: #e3f2fd;">
+        <nav class="navbar navbar-expand-lg border border-success">
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarContent" aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
+                <span class="navbar-toggler-icon"><span>
             </button>
-            <a class="navbar-brand mr-5 mb-0 h1" href="#">Vijay Kumar</a>
+            <h4 class="fw-bold mr-5 mb-0" href="#">Vijay Kumar</h4>
 
             <div class="collapse navbar-collapse justify-content-around" id="navbarContent">
               <ul class="navbar-nav">
                 <li class="nav-item">
-                  <button class="btn btn-link text-decoration-none text-black" data-toggle="collapse" href="#div1" role="button" aria-expanded="false" aria-controls="div1" onclick="opendiv(1)">About Me</button>
+                  <button class="btn text-decoration-none" data-toggle="collapse" href="#div1" role="button" aria-expanded="false" aria-controls="div1" onclick="opendiv(1)">About Me</button>
                 </li>
                 <li class="nav-item">
-                  <button class="btn btn-link text-decoration-none text-black" data-toggle="collapse" href="#div2" role="button" aria-expanded="false" aria-controls="div2" onclick="opendiv(2)">Education</button>
+                  <button class="btn text-decoration-none " data-toggle="collapse" href="#div2" role="button" aria-expanded="false" aria-controls="div2" onclick="opendiv(2)">Education</button>
                 </li>
                 <li class="nav-item">
-                    <button class="btn btn-link text-decoration-none text-black" data-toggle="collapse" aria-expanded="false" aria-controls="div3" href="#div3" onclick="opendiv(3)" role="button">Trials</button>
+                    <button class="btn text-decoration-none" data-toggle="collapse" aria-expanded="false" aria-controls="div3" href="#div3" onclick="opendiv(3)" role="button">Trials</button>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Updates</a>
+                    <button class="btn btn-link disabled text-decoration-none">Updates</button>
                 </li>
                 <li class="nav-item">
-                    <a class="btn btn-link text-decoration-none text-black" href="MyWork">My Work</a>
+                    <button class="btn text-decoration-none" href="../VS code/MyWork.html">My Work</button>
                 </li>
                 
                 <li class="nav-item">
-                  <a class="nav-link disabled" href="#">Salary</a>
+                    <button class="btn btn-link disabled text-decoration-none">Salary</button>
                 </li>
               </ul>
               <form class="nav-form form-inline d-flex justify-content-around" action="#">
