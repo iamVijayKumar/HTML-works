@@ -26,6 +26,8 @@
                 for(var i=1;i<b.length;i++){
                     b[i].classList.toggle("text-light");
                 }
+                var e=document.getElementById("work");
+                e.classList.toggle("text-light");
                 
             }
             function opendiv(i){
@@ -111,7 +113,7 @@
                     <button class="btn btn-link disabled text-decoration-none">Updates</button>
                 </li>
                 <li class="nav-item">
-                    <button class="btn text-decoration-none" href="./MyWork.html">My Work</button>
+                    <a class="btn text-decoration-none" href="MyWork" id="work">My Work</a>
                 </li>
                 
                 <li class="nav-item">
