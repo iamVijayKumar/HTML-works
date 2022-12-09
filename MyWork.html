@@ -3,6 +3,9 @@
     <head>
         <title>My Work</title>
         <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
         <!-- CSS only -->
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
         <!-- JavaScript Bundle with Popper -->
@@ -16,19 +19,20 @@
     <body class="container-fluid">
         <h1>Hello</h1>
         <div class="row border border-success" >
-            <div class="col-sm-4 mb-0 bg-info pd-5 justify-content-center" id="half">
+            <div class="col mb-0 bg-info pd-5 justify-content-center" id="half">
                 
                
-                <div class="row btn-group-vertical">
+                <div class="row btn-group">
                     <button type="button" class="btn btn-primary" data-toggle="collapse" onclick="opendiv('1')">Calculator</button>
                     <button type="button" class="btn btn-primary" data-toggle="collapse"  onclick="opendiv('2')">Calculator-2</button>
                     <button type="button" class="btn btn-primary" data-toggle="collapse"  onclick="opendiv('3')">To do list</button>
                     <button type="button" class="btn btn-primary" data-toggle="collapse"  onclick="opendiv('4')">Timer</button>
+                    <button type="button" class="btn btn-primary" data-toggle="collapse"  onclick="opendiv('5')">Cricket</button>
                     <button type="button" class="btn btn-primary">work 3</button>
                 </div>
                 
             </div>
-            <div class="collapse multi-collapse col-sm-8" id="work1">
+            <div class="collapse multi-collapse col-8" id="work1">
                 <div class="row col-md-6 offset-md-3  border border-success" id="design1">
                     <form class="form form-inline">
                         <h2 class="text-center">Calculator</h2>
@@ -48,7 +52,7 @@
                     </form> 
                 </div>
             </div>
-            <div class="collpase multi-collapse col-sm-8" id="work2" style="display:none;">
+            <div class="collpase multi-collapse col-8" id="work2" style="display:none;">
                 <div class="row col-md-6 offset-md-3" id="des1">
                     <h4 class="text-center text-black">CALCULATOR</h4><br>
                     <div class="border border-warning">
@@ -90,7 +94,7 @@
                     </div>
                 </div>
             </div>
-            <div class="collpase multi-collapse col-sm-8 mt-5" id="work3" style="display:none;" >
+            <div class="collpase multi-collapse col-8 mt-5" id="work3" style="display:none;" >
                 <div class="row col-md-6 offset-md-3 text-center bg-danger" id="mytodos">
                     <h1 class="text-light mb-0 pt-2 pb-3">My To-do's</h1>
                  
@@ -110,7 +114,7 @@
                 </div>
                  
             </div>
-            <div class="collpase multi-collapse col-sm-8 mt-5" id="work4" style="display:none;" >
+            <div class="collpase multi-collapse col-8 mt-5" id="work4" style="display:none;" >
                 <div class="container-fluid text-light text-center bg-danger py-4">
                     <h1 class="mb-0">Timer</h1> 
                 </div>
@@ -122,8 +126,27 @@
                 </div>
              <div class="d-flex justify-content-center"><div class="rounded-circle text-center" id="demo1"><p id="time">Hi</p></div>
              </div>
-            
-            
-        </div>
+            </div>
+            <div class="collpase multi-collapse col-8 col-md-auto mt-5" id="work5" style="display: block;">
+                <button class="btn btn-success mb-4" onclick="cricketers()" id="play">Start..!</button>
+                <button class="btn btn-warning mb-4" onclick="AddPlayer()" id="addPlayer">Start..!</button>
+
+                <div class="bg-danger">
+                    <table class="table table-hover table-success text-center" >
+                                <thead>
+                                <tr> 
+                                    <th >Batting order</th>
+                                    <th >First Name</th>
+                                    <th >last Name</th>
+                                    <th >Jersey no</th>
+                                    <th >Role</th> 
+                                </tr>
+                                </thead>
+                                <tbody id="playersData" class="table-success">
+                                </tbody>
+
+                            </table>
+                    </div>
+            </div>
     </body>
 </html>

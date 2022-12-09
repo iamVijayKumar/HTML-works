@@ -1,5 +1,6 @@
 body{
     background-image: linear-gradient(to bottom right,rgb(245, 9, 205),rgb(111, 111, 233));
+    background-repeat: no-repeat;
 }
 #half{
     height:750px;
@@ -66,4 +67,14 @@ li{
     50%  {background-color:blue;}
     75%  {background-color:green; }
     100% {background-color:red;}
+}
+
+#play:hover{
+    color: black;
+    box-shadow: 3cm;
+    box-shadow: 0 12px 16px ;
+    animation: example 2s infinite;
+}
+#addPlayer:hover{
+    transform: scale(1.25);
 }
