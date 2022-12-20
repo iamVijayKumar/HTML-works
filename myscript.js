@@ -94,6 +94,7 @@ function calC(i){
         }
 
 }
+
 function opendiv(i){
     var c="work"+i;
     var x=document.getElementById(c);
@@ -102,7 +103,8 @@ function opendiv(i){
     } else {
         x.style.display = "block";
     }
-    for(let j=1;j<5;j++){
+    
+    for(let j=1;j<6;j++){
         if(j!=i){
             var d= "work"+j;
             console.log(d)
@@ -110,6 +112,7 @@ function opendiv(i){
             y.style.display="none";
         }
     }
+    
     
 }
 function Arith(i){
@@ -134,7 +137,6 @@ function Clear(i){
     }
 
 }
-
 function clock(){
     let k=new Date();
     let d=document.getElementById("days").value;
@@ -177,4 +179,28 @@ function clock(){
     } 
 
 }
+}
+function cricketers(){
+    document.getElementById("playersData").innerHTML="";
+    var tabledata=``;
+    const url="http://localhost:8088/allPlayers";
+    fetch(url)
+    .then(response=>(response.json()))
+    .then(data=>{console.log(data)
+    show(data)})
+    function show(data){
+        console.log("HI");
+        for(var i=0;i<data.length;i++){
+          tabledata+=`<tr>
+          <td>${data[i].battingPosition}</td>
+          <td>${data[i].firstName}</td>
+          <td>${data[i].lastName}</td>
+          
+          <td>${data[i].jerseyNo}</td>
+          <td>${data[i].role}</td>
+          </tr>`;
+        }
+        document.getElementById("playersData").innerHTML+=tabledata;
+    }
+    
 }
