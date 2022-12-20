@@ -1,4 +1,4 @@
-var p=0;
+var p=6;
 function Add(){
     var a=document.getElementById("var").value;
     
@@ -30,7 +30,8 @@ function Add(){
 }
 function Buttons(k){
     console.log(k);
-    var x=document.getElementsByTagName("LI");
+    var x=document.getElementsByTagName("li");
+
     var p=document.createElement("span");
     var q=document.createTextNode("X");
     p.className="btn btn-danger";
@@ -102,6 +103,8 @@ function opendiv(i){
         x.style.display = "none";
     } else {
         x.style.display = "block";
+        x.style.marginBottom="100%";
+        x.style.paddingBottom="0%";
     }
     
     for(let j=1;j<6;j++){

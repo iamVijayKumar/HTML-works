@@ -11,35 +11,56 @@
         <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
         <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script> 
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
         <link rel="stylesheet" href="styles.css">
         <script src="myscript.js"></script>
 
     </head>
     <body class="container-fluid">
-        <h1>Hello</h1>
-        <div class="row border border-success d-flex flex-row" >
-            <div class="col mb-0" id="half">
-    
-               
-                <div class="row btn-group-vertical">
+        <h1>My Work</h1>
+        <a href="Hello" style="text-decoration: none;"> <p class="text-end" id="MainLink">Main Page</p></a>      
+        <nav class="navbar navbar-expand-lg border border-success">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarContent" aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span id="icon1" class="navbar-toggler-icon"><span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarContent">
+              <ul class="navbar-nav ">
+                <li class="nav-item">
                     <button type="button" class="btn btn-primary" data-toggle="collapse" onclick="opendiv('1')">Calculator</button>
+                </li>
+                <li class="nav-item">
                     <button type="button" class="btn btn-primary" data-toggle="collapse"  onclick="opendiv('2')">Calculator-2</button>
+                  
+                </li>
+                <li class="nav-item">
                     <button type="button" class="btn btn-primary" data-toggle="collapse"  onclick="opendiv('3')">To do list</button>
+                    </li>
+                <li class="nav-item">
                     <button type="button" class="btn btn-primary" data-toggle="collapse"  onclick="opendiv('4')">Timer</button>
+                  
+                </li>
+                <li class="nav-item">
                     <button type="button" class="btn btn-primary" data-toggle="collapse"  onclick="opendiv('5')">Cricket</button>
-                    <button type="button" class="btn btn-primary">work 3</button>
-                </div>
-                
+                  
+                </li>
+                <li class="nav-item">
+                    <button class="btn btn-link disabled text-decoration-none">new Work</button>
+                </li>
+              </ul>
+             
             </div>
-            <div class="collapse multi-collapse col-sm-8" id="work1">
-                <div class="row col-md-6 offset-md-3  border border-success" id="design1">
+            
+        </nav>
+        <div class="pt-5">
+            <div class="collapse multi-collapse" id="work1" style="display: none;">
+                <div class="border border-success col-sm-4" id="design1">
                     <form class="form form-inline">
                         <h2 class="text-center">Calculator</h2>
                         <label for="num1">Num 1:</label>
                         <input type="number" id="num1" placeholder="Enter num1" value=""><br>
                         <label for="num2">Num 2:</label>
                         <input type="number" id="num2" placeholder="Enter Num2" value=""><br><br>
-                        <div class="d-flex justify-content-around">
+                        <div class="d-flex justify-content-around w-50">
                         <button type="button" onclick="calC('add')">+</button>
                         <button type="button" onclick="calC('sub')">-</button>
                         <button type="button" onclick="calC('mul')">*</button>
@@ -51,8 +72,8 @@
                     </form> 
                 </div>
             </div>
-            <div class="collpase multi-collapse col-sm-8" id="work2" style="display:none;">
-                <div class="row col-md-6 offset-md-3" id="des1">
+            <div class="collpase multi-collapse" id="work2" style="display:none;">
+                <div class="bg-warning" id="des2">
                     <h4 class="text-center text-black">CALCULATOR</h4><br>
                     <div class="border border-warning">
                                 <div class="d-flex flex-column">
@@ -93,8 +114,8 @@
                     </div>
                 </div>
             </div>
-            <div class="collpase multi-collapse col-sm-8 mt-5" id="work3" style="display:none;" >
-                <div class="row col-md-6 offset-md-3 text-center bg-danger" id="mytodos">
+            <div class="collpase multi-collapse" id="work3" style="display:none;" >
+                <div id="mytodos">
                     <h1 class="text-light mb-0 pt-2 pb-3">My To-do's</h1>
                  
                      <div class="d-flex justify-content-center py-1">
@@ -105,7 +126,7 @@
                      <div class="bg-warning text-dark" id="deco1">
                          <h3 class="text-center mb-0">My Tasks</h3>
                          <div class="d-flex justify-content-around text-dark pt-5">
-                           <ul id="list" style="border:10px solid orangered; width:100%;">
+                           <ul class="todo" id="list" style="border:10px solid orangered; width:100%;">
                            </ul>
                          </div>
          
@@ -113,39 +134,44 @@
                 </div>
                  
             </div>
-            <div class="collpase multi-collapse col-sm-8 mt-5" id="work4" style="display:none;" >
-                <div class="container-fluid text-light text-center bg-danger py-4">
-                    <h1 class="mb-0">Timer</h1> 
-                </div>
-                <div class="py-4 text-center bg-dark container-fluid">
-                    <input type="number"  placeholder="dd" id="days" min="0" max="365">
-                    <input type="number" placeholder="hh" id="hour" min="0" max="23">
-                    <input type="number" placeholder="mm" id="min" min="0" max="59"><br>
-                     <button type="submit" class="btn btn-success mt-2" onclick="clock()">setTime</button>
-                </div>
-             <div class="d-flex justify-content-center"><div class="rounded-circle text-center" id="demo1"><p id="time">Hi</p></div>
-             </div>
-            </div>
-            <div class="collpase multi-collapse col-sm-8 mt-5" id="work5">
-                <button class="btn btn-success mb-4" onclick="cricketers()" id="play">Start..!</button>
-                <button class="btn btn-success mb-4" onclick="cricketers()" id="play2">Start..!</button>
-
-                <div class="bg-danger">
-                    <table class="table table-hover table-success text-center" >
-                                <thead>
-                                <tr> 
-                                    <th >Batting order</th>
-                                    <th >First Name</th>
-                                    <th >last Name</th>
-                                    <th >Jersey no</th>
-                                    <th >Role</th> 
-                                </tr>
-                                </thead>
-                                <tbody id="playersData" class="table-success">
-                                </tbody>
-
-                            </table>
+            <div class="collpase multi-collapse" id="work4" style="display:none;" >
+                <div id="timer" class="col-sm-8">
+                    <div class="text-light text-center bg-danger py-4">
+                        <h1 class="mb-0">Timer</h1> 
                     </div>
+                    <div class="py-4 text-center bg-dark container-fluid">
+                        <input type="number"  placeholder="dd" id="days" min="0" max="365">
+                        <input type="number" placeholder="hh" id="hour" min="0" max="23">
+                        <input type="number" placeholder="mm" id="min" min="0" max="59"><br>
+                        <button type="submit" class="btn btn-success mt-2" onclick="clock()">setTime</button>
+                    </div>
+                <div class="d-flex justify-content-center"><div class="rounded-circle text-center" id="demo1"><p id="time">Hi</p></div>
+                </div>
+                </div>
             </div>
+            <div class="collpase multi-collapse" id="work5" style="display:none;">
+                <div id="cricketers">
+                    <button class="btn btn-success mb-4" onclick="cricketers()" id="play">Start..!</button>
+                    <button class="btn btn-success mb-4" onclick="cricketers()" id="play2">Start..!</button>
+
+                    
+                        <table class="table table-info table-hover text-center" >
+                                    <thead>
+                                    <tr> 
+                                        <th >Batting order</th>
+                                        <th >First Name</th>
+                                        <th >last Name</th>
+                                        <th >Jersey no</th>
+                                        <th >Role</th> 
+                                    </tr>
+                                    </thead>
+                                    <tbody id="playersData" class="table-success">
+                                    </tbody>
+
+                                </table>
+                        
+                </div>
+            </div>
+        </div>
     </body>
 </html>
